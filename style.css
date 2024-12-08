@@ -1,0 +1,182 @@
+:root {
+  --background-light: #ffffff;
+  --text-light: #000000;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --border-radius: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+li{
+  list-style: none;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* إظهار جزء صغير فقط */
+  width: 250px; /* عرض القائمة الجانبية */
+  height: 100%;
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease; /* تأثير الانتقال */
+}
+
+/* عند فتح القائمة */
+.sidebar.open {
+  left: 0; /* القائمة تظهر بالكامل */
+}
+
+/* الهواتف المحمولة */
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .add-task {
+    margin: 1rem auto;
+    width: 100%;
+  }
+}
+.content {
+  padding: 2rem;
+}
+
+.placeholder {
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.tab {
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab:hover, .tab.active {
+  background: var(--primary-color);
+}
+
+.task {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: darkblue;
+}
+
+.add-task {
+  display: block;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+}
+
+/* الهواتف المحمولة */
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .add-task {
+    margin: 1rem auto;
+    width: 100%;
+  }
+}
+.task {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* تنسيق الأزرار */
+/* تصميم قائمة المهام */
+.task {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.task .buttons {
+  display: flex; /* ترتيب الأزرار أفقيًا */
+  gap: 0.5rem; /* إضافة مسافة بين الأزرار */
+  justify-content: flex-start; /* الأزرار تبدأ من اليسار */
+  flex-wrap: wrap; /* السماح بنقل الأزرار للسطر التالي إذا لزم */
+  margin-top: 0.5rem;
+}
+
+.task .buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem; /* مسافة بين الأيقونة والنص */
+  padding: 0.5rem 1rem; /* مساحة داخلية */
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+i{
+  color: var(--primary-color)
+}
+/* ألوان الأزرار */
+.btn-edit {
+  color: #007bff;
+}
+
+.btn-edit:hover {
+  color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-favorite.favorited {
+  color: #28a745;
+  color: #fff;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدير المهام</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  rel="stylesheet"
+/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <!-- الشريط العلوي -->
+    <header class="header">
+      <button id="menuToggle" class="btn menu-btn">☰</button>
+      <h1>مدير المهام</h1>
+    </header>
+    <!-- القائمة الجانبية -->
+<aside id="sidebar" class="sidebar">
+  <ul>
+    <li id="importantTab" class="tab active">هام</li>
+    <li id="plannedTab" class="tab">مخطط</li>
+    <li id="tasksTab" class="tab">جميع المهام</li>
+    <li id="favoritesTab" class="tab">المفضلات</li>
+  </ul>
+</aside>
+    <!-- المحتوى الرئيسي -->
+    <main class="content">
+      <div id="tasksContainer">
+        <p class="placeholder">لا توجد مهام بعد. اضغط على "إضافة مهمة".</p>
+      </div>
+      <button id="addTaskButton" class="btn add-task">+ إضافة مهمة</button>
+    </main>
+    <audio id="taskSound" src="click.wav"></audio>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
